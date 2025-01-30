@@ -439,7 +439,7 @@ namespace CSharpMath.Forms.Example {
       
       //  large roots
       labels[40] = new MathView {
-        LaTeX = @"\colorbox{#f0f0e0}{\sqrt{1+\colorbox{#d0c0d0}{\sqrt{1+\colorbox{#a080c0}{\sqrt{1+\colorbox{#7050a0}{\sqrt{1+\colorbox{403060}{\colorbox{#102000}{\sqrt{1+\cdots}}}}}}}}}}}",
+        LaTeX = @"\colorbox{#f0f0e0}{\sqrt{1+\colorbox{#d0c0d0}{\sqrt{1+\colorbox{#a080c0}{\sqrt{1+\colorbox{#7050a0}{\sqrt{1+\colorbox{#403060}{\colorbox{#102000}{\sqrt{1+\cdots}}}}}}}}}}}",
         HeightRequest = 150,
         FontSize = 22.5f
       };
