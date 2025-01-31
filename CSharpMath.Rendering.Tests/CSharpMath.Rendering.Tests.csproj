@@ -4,5 +4,7 @@
     <ProjectReference Include="..\CSharpMath.Avalonia\CSharpMath.Avalonia.csproj" />
     <ProjectReference Include="..\CSharpMath.SkiaSharp\CSharpMath.SkiaSharp.csproj" />
     <PackageReference Include="Avalonia.Skia" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SkiaSharp" Version="2.88.9" />
   </ItemGroup>
 </Project>

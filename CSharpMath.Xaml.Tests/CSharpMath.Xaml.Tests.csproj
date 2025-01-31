@@ -2,6 +2,8 @@
   <ItemGroup>
     <EmbeddedResource Include="..\CSharpMath.Rendering.Tests\ComicNeue_Bold.otf" Link="ComicNeue_Bold.otf" />
     <PackageReference Include="Avalonia.Markup.Xaml.Loader" Version="$(AvaloniaVersion)" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SkiaSharp" Version="2.88.9" />
     <ProjectReference Include="..\CSharpMath.Avalonia\CSharpMath.Avalonia.csproj" />
     <ProjectReference Include="..\CSharpMath.Forms\CSharpMath.Forms.csproj" />
   </ItemGroup>

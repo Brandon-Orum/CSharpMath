@@ -4,6 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <StartupObject>CSharpMath.Editor.Tests.Visualizer.Checker</StartupObject>
   </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\CSharpMath.Editor\CSharpMath.Editor.csproj" />
