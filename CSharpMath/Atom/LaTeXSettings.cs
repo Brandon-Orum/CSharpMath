@@ -142,6 +142,10 @@ namespace CSharpMath.Atom {
                 LeftDelimiter = new Boundary("("),
                 RightDelimiter = new Boundary(")")
               }))) },
+        { @"\stackrel", (parser, accumulate, stopChar) =>
+          parser.ReadArgument().Bind(numerator =>
+            parser.ReadArgument().Bind(denominator =>
+              Ok(new Fraction(numerator, denominator, false)))) },
         { @"\sqrt", (parser, accumulate, stopChar) =>
           parser.ReadArgumentOptional().Bind(degree =>
             parser.ReadArgument().Bind(radicand =>
@@ -364,8 +368,7 @@ namespace CSharpMath.Atom {
       if (hexOrName.StartsWith("#", StringComparison.Ordinal)) {
         var hex = hexOrName.Substring(1);
         return
-          (hex.Length, int.TryParse(hex, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var i)) switch
-          {
+          (hex.Length, int.TryParse(hex, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out var i)) switch {
             (8, true) => Color.FromArgb(i),
             (6, true) => Color.FromArgb(unchecked((int)0xff000000) + i),
             _ => null
@@ -434,6 +437,7 @@ namespace CSharpMath.Atom {
           atom is Accent accent
           ? parser.ReadArgument().Bind(accentee => Ok(new Accent(accent.Nucleus, accentee)))
           : Ok(atom.Clone(false)))) {
+
         // Custom additions
         { @"\diameter", new Ordinary("\u2300") },
         { @"\npreccurlyeq", new Relation("⋠") },
@@ -1156,5 +1160,6 @@ namespace CSharpMath.Atom {
         // { @"\supsetneqq", new Relation("⫌") }, // Glyph not in Latin Modern Math
         // \varsupsetneqq -> ⫌ + U+FE00 (Variation Selector 1) Not dealing with variation selectors, thank you very much
       };
+
   }
 }
