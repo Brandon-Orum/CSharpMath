@@ -8,6 +8,9 @@
   
   <ItemGroup>
     <PackageReference Include="SkiaSharp" Version="2.88.9" />
+    <PackageReference Include="System.Memory" Version="4.6.0" />
+    <PackageReference Include="System.Numerics.Vectors" Version="4.6.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.0" />
     <ProjectReference Include="..\CSharpMath.Rendering\CSharpMath.Rendering.csproj" />
   </ItemGroup>
   

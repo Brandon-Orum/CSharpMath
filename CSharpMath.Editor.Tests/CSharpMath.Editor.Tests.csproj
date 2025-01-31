@@ -15,6 +15,8 @@
     <Compile Include="..\CSharpMath.CoreTests\_Helpers\FrontEnd\TestTypesettingContext.cs" Link="_Helpers\FrontEnd\TestTypesettingContext.cs" />
     <EmbeddedResource Include="..\CSharpMath.CoreTests\_Helpers\Resources\latinmodern-math.json" Link="_Helpers\Resources\latinmodern-math.json" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Memory" Version="4.6.0" />
+    <PackageReference Include="System.Runtime.CompilerServices.Unsafe" Version="6.1.0" />
     <ProjectReference Include="..\CSharpMath.Editor\CSharpMath.Editor.csproj" />
   </ItemGroup>
 </Project>
